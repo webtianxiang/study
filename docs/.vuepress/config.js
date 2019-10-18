@@ -54,7 +54,6 @@ module.exports = {
           '/js/解构赋值'
         ]
       }
-    ],
-    sidebarDepth: '2'
+    ]
   }
 }
