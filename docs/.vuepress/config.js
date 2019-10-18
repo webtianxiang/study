@@ -1,6 +1,7 @@
 module.exports = {
   title: 'web_翔的进阶之路',
   description: '夜空中最闪亮的星！！！',
+  // dest: '../blogs',
   dest: 'dist',
   base: '/study/', // 设置仓库路径
   repo: 'https://github.com/webtianxiang/study',

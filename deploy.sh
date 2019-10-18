@@ -12,7 +12,18 @@ git push origin master
 yarn run docs:build
 
 # 进入生成的文件夹
+# cd ../blogs
+# git add .
+# git commit -m 'deploy'
+# git push origin master --force
+
+
 cd dist
+git init
+git add -A
+git commit -m 'deploy'
+git push -f git@github.com:webtianxiang/study.git master:gh-pages
+
 
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
@@ -21,6 +32,7 @@ cd dist
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 如果发布到 httpsre://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:webtianxiang/study.git master:gh-pages
+# git push -f git@github.com:webtianxiang/study.git master:gh-pages
+# git push -f git@github.com:webtianxiang/blogs.git master
 
 cd -
