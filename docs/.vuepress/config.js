@@ -27,17 +27,17 @@ module.exports = {
       {
         text: '其他知识学习',
         link: '/other/'
-      },
-      {
-        text: '实习日志',
-        ariaLabel: 'Language Menu',
-        items: [
-          { text: '实习第一个月', link: '/log/first-month/' },
-          { text: '实习第二个月', link: '/log/second-month/' },
-          { text: '实习第三个月', link: '/log/third-month/' },
-          { text: '学习计划', link: '/log/plan/' },
-        ]
       }
+      // {
+      //   text: '实习日志',
+      //   ariaLabel: 'Language Menu',
+      //   items: [
+      //     { text: '实习第一个月', link: '/log/first-month/' },
+      //     { text: '实习第二个月', link: '/log/second-month/' },
+      //     { text: '实习第三个月', link: '/log/third-month/' },
+      //     { text: '学习计划', link: '/log/plan/' },
+      //   ]
+      // }
     ],
     sidebar: {
       '/js/': [

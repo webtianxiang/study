@@ -3,10 +3,10 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-# git add .
-# git commit -m 'deploy'
+git add .
+git commit -m 'deploy'
 
-# git push origin master
+git push origin master
 
 # 生成静态文件
 yarn run docs:build
