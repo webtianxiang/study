@@ -6,17 +6,14 @@ set -e
 git add .
 git commit -m 'deploy'
 
+# 生成静态文件
+
+yarn run docs:build
+git add .
+git commit -m 'deploy'
 git push origin master
 
-# 生成静态文件
-yarn run docs:build
-
 # 进入生成的文件夹
-# cd ../blogs
-# git add .
-# git commit -m 'deploy'
-# git push origin master --force
-
 
 cd dist
 git init
