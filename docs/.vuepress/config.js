@@ -2,8 +2,8 @@ module.exports = {
   title: 'web_翔的进阶之路',
   description: '夜空中最闪亮的星！！！',
   dest: './dist',
-  base: '/web_xiang/', // 设置仓库路径
-  repo: 'https://github.com/webtianxiang/web_xiang',
+  base: '/study/', // 设置仓库路径
+  repo: 'https://github.com/webtianxiang/study',
   plugins: [
     '@vuepress/active-header-links',
     '@vuepress/back-to-top'

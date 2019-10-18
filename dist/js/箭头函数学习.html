@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>箭头函数 | web_翔的进阶之路</title>
+    <meta name="description" content="夜空中最闪亮的星！！！">
+    <link rel="icon" href="./public/logo.ico">
+    
+    <link rel="preload" href="/study/assets/css/0.styles.ab616fa0.css" as="style"><link rel="preload" href="/study/assets/js/app.d83da619.js" as="script"><link rel="preload" href="/study/assets/js/2.77afc745.js" as="script"><link rel="preload" href="/study/assets/js/10.7bcae5bb.js" as="script"><link rel="prefetch" href="/study/assets/js/11.527430c4.js"><link rel="prefetch" href="/study/assets/js/12.65da1391.js"><link rel="prefetch" href="/study/assets/js/13.6d9a21ca.js"><link rel="prefetch" href="/study/assets/js/3.f2c860b9.js"><link rel="prefetch" href="/study/assets/js/4.c4832647.js"><link rel="prefetch" href="/study/assets/js/5.cf7ec021.js"><link rel="prefetch" href="/study/assets/js/6.e0d669ca.js"><link rel="prefetch" href="/study/assets/js/7.e46aa182.js"><link rel="prefetch" href="/study/assets/js/8.fc2d14de.js"><link rel="prefetch" href="/study/assets/js/9.a73cf66f.js">
+    <link rel="stylesheet" href="/study/assets/css/0.styles.ab616fa0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study/" class="home-link router-link-active"><!----> <span class="site-name">web_翔的进阶之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  百度
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  谷歌
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  百度
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  谷歌
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/study/js/" class="sidebar-heading clickable router-link-active open"><span>JS学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/study/js/export.html" class="sidebar-link">export学习和import学习</a></li><li><a href="/study/js/深入js变量.html" class="sidebar-link">深入javascript变量</a></li><li><a href="/study/js/解构赋值.html" class="sidebar-link">解构赋值</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/study/css/" class="sidebar-heading clickable"><span>CSS学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/study/js/export.html" class="sidebar-link">export学习和import学习</a></li><li><a href="/study/js/深入js变量.html" class="sidebar-link">深入javascript变量</a></li><li><a href="/study/js/解构赋值.html" class="sidebar-link">解构赋值</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/study/vue/" class="sidebar-heading clickable"><span>Vue学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/study/js/export.html" class="sidebar-link">export学习和import学习</a></li><li><a href="/study/js/深入js变量.html" class="sidebar-link">深入javascript变量</a></li><li><a href="/study/js/解构赋值.html" class="sidebar-link">解构赋值</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="箭头函数"><a href="#箭头函数" class="header-anchor">#</a> 箭头函数</h1> <h2 id="es6标准新增了一种新的函数：arrow-function（箭头函数）"><a href="#es6标准新增了一种新的函数：arrow-function（箭头函数）" class="header-anchor">#</a> ES6标准新增了一种新的函数：Arrow Function（箭头函数）</h2> <pre><code>1. 为什么叫Arrow Function？因为它的定义用的就是一个箭头：
+    x =&gt; x * x
+2. 上面的箭头函数相当于：
+    function (x) {
+        return x * x;
+    }
+3. 箭头函数相当于匿名函数，并且简化了函数定义。箭头函数有两种格式，一种像上面的，只包含一
+个表达式，连{ ... }和return都省略掉了。还有一种可以包含多条语句，这时候就不能省略{...}
+和return：
+    x =&gt; {
+        if (x &gt; 0) {
+            return x * x;
+        }
+        else {
+            return - x * x;
+        }
+    }
+4. 如果参数不是一个，就需要用括号()括起来：
+    1⃣️ 两个参数:
+        (x, y) =&gt; x * x + y * y
+    2⃣️ 无参数:
+        () =&gt; 3.14
+    3⃣️ 可变参数:
+        (x, y, ...rest) =&gt; {
+            var i, sum = x + y;
+            for (i=0; i&lt;rest.length; i++) {
+                sum += rest[i];
+            }
+            return sum;
+        }
+5. 如果要返回一个对象，就要注意，如果是单表达式，这么写的话会报错：
+    1⃣️ SyntaxError:
+        x =&gt; { foo: x }
+    2⃣️ 因为和函数体的{ ... }有语法冲突，所以要改为：
+        x =&gt; ({ foo: x })
+</code></pre> <h2 id="this"><a href="#this" class="header-anchor">#</a> this</h2> <pre><code>箭头函数看上去是匿名函数的一种简写，但实际上，箭头函数和匿名函数有个明显的区别：箭头函数内
+部的this是词法作用域，由上下文确定。
+1.回顾前面的例子，由于JavaScript函数对this绑定的错误处理，下面的例子无法得到预期结果：
+    var obj = {
+        birth: 1990,
+        getAge: function () {
+            var b = this.birth; // 1990
+            var fn = function () {
+                return new Date().getFullYear() - this.birth; // this指向window或undefined
+            };
+            return fn();
+        }
+    };
+2. 现在，箭头函数完全修复了this的指向，this总是指向词法作用域，也就是外层调用者obj：
+    var obj = {
+        birth: 1990,
+        getAge: function () {
+            var b = this.birth; // 1990
+            var fn = () =&gt; new Date().getFullYear() - this.birth; // this指向obj对象
+            return fn();
+        }
+    };
+    obj.getAge(); // 25
+3. 如果使用箭头函数，以前的那种hack写法：
+    var that = this;
+    就不再需要了。
+
+4. 由于this在箭头函数中已经按照词法作用域绑定了，所以，用call()或者apply()调用箭头函数
+时，无法对this进行绑定，即传入的第一个参数被忽略：
+    var obj = {
+        birth: 1990,
+        getAge: function (year) {
+            var b = this.birth; // 1990
+            var fn = (y) =&gt; y - this.birth; // this.birth仍是1990
+            return fn.call({birth:2000}, year);
+        }
+    };
+    obj.getAge(2015); // 25
+</code></pre></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/study/assets/js/app.d83da619.js" defer></script><script src="/study/assets/js/2.77afc745.js" defer></script><script src="/study/assets/js/10.7bcae5bb.js" defer></script>
+  </body>
+</html>
