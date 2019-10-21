@@ -31,35 +31,60 @@ module.exports = {
     ],
     sidebar: {
       '/js/': [
-        'export',
-        '深入js变量',
-        '解构赋值',
-        '使用set提高代码的性能',
-        '类型、值和变量',
-        '词法结构',
-        '表达式和运算符',
-        '语句',
-        '数组',
-        '对象'
+        {
+          title: 'JS学习',
+          collapsable: false,
+          children: [
+            'export',
+            '深入js变量',
+            '解构赋值',
+            '使用set提高代码的性能',
+            '类型、值和变量',
+            '词法结构',
+            '表达式和运算符',
+            '语句',
+            '数组',
+            '对象',
+          ]
+        }
       ],
+      
       '/css/': [
-        '纯CSS控制显示溢出',
-        '栅格布局学习',
-        'CSS权重学习',
-        'flex布局学习'
+        {
+          title: 'CSS学习',
+          collapsable: false,
+          children: [
+            '纯CSS控制显示溢出',
+            '栅格布局学习',
+            'CSS权重学习',
+            'flex布局学习'
+          ]
+        }
       ],
       '/vue/': [
-        '初入vue全家桶',
-        '路由学习',
-        '同步组件和异步组件学习',
-        'vue中定时器的使用'
+        {
+          title: 'Vue学习',
+          collapsable: false,
+          children: [
+            '初入vue全家桶',
+            '路由学习',
+            '同步组件和异步组件学习',
+            'vue中定时器的使用'
+          ]
+        }
       ],
       '/other/': [
-        '/other/git分布式管理系统学习',
-        '/other/iaas、paas、saas学习',
-        '/other/nginx代理服务的配置',
-        '/other/npm包管理工具学习',          
-        '/other/Submodule学习'
+        {
+          title: '前端其他知识学习',
+          collapsable: false,
+          children: [
+            'git分布式管理系统学习',
+            'iaas、paas、saas学习',
+            'nginx代理服务的配置',
+            'npm包管理工具学习',          
+            'Submodule学习'
+          ]
+        }
       ]
     },
     sidebarDepth: 3,
