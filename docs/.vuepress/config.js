@@ -88,7 +88,6 @@ module.exports = {
       ]
     },
     sidebarDepth: 3,
-    // displayAllHeaders: true,
     activeHeaderLinks: false,
   }
 }
