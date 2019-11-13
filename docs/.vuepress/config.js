@@ -81,8 +81,7 @@ module.exports = {
             'git分布式管理系统学习',
             'iaas、paas、saas学习',
             'nginx代理服务的配置',
-            'npm包管理工具学习',          
-            'Submodule学习'
+            'npm包管理工具学习'
           ]
         }
       ]
