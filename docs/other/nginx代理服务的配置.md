@@ -26,10 +26,10 @@
             server {
                 listen 80;
                 listen 443 ssl;
-                server_name mostwanted.shuiditech.com;
+                server_name cba.com;
 
-                ssl_certificate      /usr/local/etc/nginx/conf/shuiditech.com.crt;
-                ssl_certificate_key  /usr/local/etc/nginx/conf/shuiditech.com.key;
+                ssl_certificate      /usr/local/etc/nginx/conf/abc.com.crt;
+                ssl_certificate_key  /usr/local/etc/nginx/conf/abc.com.key;
 
                 location / {
                     proxy_pass http://127.0.0.1:9001;
@@ -41,10 +41,10 @@
             server {
                 listen 80;
                 listen 443 ssl;
-                server_name mostwanted.shuiditech.com;
+                server_name cba.com;
 
-                ssl_certificate      /usr/local/etc/nginx/conf/shuiditech.com.crt;
-                ssl_certificate_key  /usr/local/etc/nginx/conf/shuiditech.com.key;
+                ssl_certificate      /usr/local/etc/nginx/conf/abc.com.crt;
+                ssl_certificate_key  /usr/local/etc/nginx/conf/abc.com.key;
 
                 location / {
                     proxy_pass http://127.0.0.1:9001;
