@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue中定时器的使用 | web_翔的进阶之路</title>
+    <meta name="description" content="夜空中最闪亮的星！！！">
+    <link rel="icon" href="./public/logo.ico">
+    
+    <link rel="preload" href="/study/assets/css/0.styles.9829664d.css" as="style"><link rel="preload" href="/study/assets/js/app.ee0bb4df.js" as="script"><link rel="preload" href="/study/assets/js/2.592151bd.js" as="script"><link rel="preload" href="/study/assets/js/32.5a8c1e45.js" as="script"><link rel="prefetch" href="/study/assets/js/10.731b10cb.js"><link rel="prefetch" href="/study/assets/js/11.42efe72d.js"><link rel="prefetch" href="/study/assets/js/12.0d6ef079.js"><link rel="prefetch" href="/study/assets/js/13.e4e2de33.js"><link rel="prefetch" href="/study/assets/js/14.b47ba695.js"><link rel="prefetch" href="/study/assets/js/15.14563377.js"><link rel="prefetch" href="/study/assets/js/16.2eb1f60a.js"><link rel="prefetch" href="/study/assets/js/17.c04e573b.js"><link rel="prefetch" href="/study/assets/js/18.fb37fc3a.js"><link rel="prefetch" href="/study/assets/js/19.3aeb62d6.js"><link rel="prefetch" href="/study/assets/js/20.8a151fae.js"><link rel="prefetch" href="/study/assets/js/21.8856ba91.js"><link rel="prefetch" href="/study/assets/js/22.31426bcd.js"><link rel="prefetch" href="/study/assets/js/23.9d25a357.js"><link rel="prefetch" href="/study/assets/js/24.acd34840.js"><link rel="prefetch" href="/study/assets/js/25.e913ff96.js"><link rel="prefetch" href="/study/assets/js/26.63b2660a.js"><link rel="prefetch" href="/study/assets/js/27.bea6cb64.js"><link rel="prefetch" href="/study/assets/js/28.ff5f9185.js"><link rel="prefetch" href="/study/assets/js/29.233b541e.js"><link rel="prefetch" href="/study/assets/js/3.34b1aa0d.js"><link rel="prefetch" href="/study/assets/js/30.d05c5052.js"><link rel="prefetch" href="/study/assets/js/31.a0230683.js"><link rel="prefetch" href="/study/assets/js/33.df983d2e.js"><link rel="prefetch" href="/study/assets/js/34.89405398.js"><link rel="prefetch" href="/study/assets/js/35.09c8d108.js"><link rel="prefetch" href="/study/assets/js/36.0e0b04b1.js"><link rel="prefetch" href="/study/assets/js/4.da04f69e.js"><link rel="prefetch" href="/study/assets/js/5.0acdbf1f.js"><link rel="prefetch" href="/study/assets/js/6.7644edfb.js"><link rel="prefetch" href="/study/assets/js/7.a20481b1.js"><link rel="prefetch" href="/study/assets/js/8.0b7692c0.js"><link rel="prefetch" href="/study/assets/js/9.95290f71.js">
+    <link rel="stylesheet" href="/study/assets/css/0.styles.9829664d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study/" class="home-link router-link-active"><!----> <span class="site-name">web_翔的进阶之路</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/study/js/" class="nav-link">js学习</a></div><div class="nav-item"><a href="/study/css/" class="nav-link">CSS学习</a></div><div class="nav-item"><a href="/study/vue/" class="nav-link router-link-active">Vue学习</a></div><div class="nav-item"><a href="/study/other/" class="nav-link">其他知识学习</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/study/js/" class="nav-link">js学习</a></div><div class="nav-item"><a href="/study/css/" class="nav-link">CSS学习</a></div><div class="nav-item"><a href="/study/vue/" class="nav-link router-link-active">Vue学习</a></div><div class="nav-item"><a href="/study/other/" class="nav-link">其他知识学习</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue学习</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/study/vue/初入vue全家桶.html" class="sidebar-link">vue全家桶</a></li><li><a href="/study/vue/路由学习.html" class="sidebar-link">vue-router</a></li><li><a href="/study/vue/同步组件和异步组件学习.html" class="sidebar-link">同步组件和异步组件学习</a></li><li><a href="/study/vue/vue中定时器的使用.html" class="active sidebar-link">Vue中定时器的使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/vue/vue中定时器的使用.html#循环执行：setinterval" class="sidebar-link">循环执行：setInterval</a></li><li class="sidebar-sub-header"><a href="/study/vue/vue中定时器的使用.html#定时执行：settimeout" class="sidebar-link">定时执行：setTimeout</a></li><li class="sidebar-sub-header"><a href="/study/vue/vue中定时器的使用.html#定时器使用注意事项" class="sidebar-link">定时器使用注意事项</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue中定时器的使用"><a href="#vue中定时器的使用" class="header-anchor">#</a> Vue中定时器的使用</h1> <p>js中定时器有两种：
+1⃣️ 一个是循环执行：setInterval
+2⃣️ 另一个是定时执行：setTimeout</p> <h2 id="循环执行：setinterval"><a href="#循环执行：setinterval" class="header-anchor">#</a> 循环执行：setInterval</h2> <pre><code>1. 定义：循环执行就是设置一个时间间隔，每过一段时间都会执行一次这个方法,直到这个定时器被销毁
+掉
+2.用法：用法是setInterval（“方法名或方法”，“延时”）， 第一个参数为方法名或者方法，注意为方
+法名的时候不要加括号,第二个参数为时间间隔
+3.停止执行：clearInterval，用于停止 setInterval() 方法执行的函数代码
+4.用例:
+    if (this.timer) clearInterval(this.timer)
+    this.timer = setInterval(() =&gt; {
+      this.getQueryRealTimeMetricState()
+    }, this.intervalTime)
+</code></pre> <h2 id="定时执行：settimeout"><a href="#定时执行：settimeout" class="header-anchor">#</a> 定时执行：setTimeout</h2> <pre><code>1.定义：定时执行setTimeout是设置一个时间，等待时间到达的时候只执行一次，但是执行完以后定时
+器还在，只是没有运行
+2.用法：是setTimeout(“方法名或方法”, “延时”); 第一个参数为方法名或者方法，注意为方法名的
+时候不要加括号,第二个参数为时间间隔
+3.用例：
+    if (this.timer) clearTimeout(this.timer)
+        this.timer = setTimeout(() =&gt; {
+        this.loading = true
+        this.remoteMethod(val, (data = []) =&gt; {
+            if (!Array.isArray(data)) {
+                return console.log(new Error(`the arguments must be an array`)）
+            }
+            if (Array.isArray(this.value)) {
+                // 多选
+                // 需将之前选中的同样增加到items中，防止之前选中的不显示（实际任然存在）
+                this.$emit('update:items', this.value.concat(data))
+            } else {
+                // 单选
+                this.$emit('update:items', data)
+            }
+        }).then(() =&gt; {
+            this.loading = false
+        }).catch(() =&gt; {
+            this.loading = false
+        })
+        }, 300)
+</code></pre> <h2 id="定时器使用注意事项"><a href="#定时器使用注意事项" class="header-anchor">#</a> 定时器使用注意事项</h2> <pre><code>1. 定时器需要在页面销毁的时候清除掉，不然会一直存在！！！
+2.在使用setInterval方法时，每一次启动都需要对setInterval方法返回的值做一个判断，判断是否
+是空值，若不是空值，则要停止定时器并将值设为空，再重新启动，如果不进行判断并赋值，有可能会造
+成计时器循环调用，在同等的时间内同时执行调用的代码，并会随着代码的运行时间增加而增加，导致功
+能无法实现，甚至占用过多资源而卡死奔溃。因此在每一次使用setInterval方法时，都需要进行一次判
+断。
+3.vue中的setInterval在页面离开之后仍会执行，在切换多个路由之后，定时器的速度会越来越快。
+解决方法：
+    beforeDestroy() {
+        if(this.timer) {
+            clearInterval(this.timer);
+        }
+    }
+</code></pre></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/study/vue/同步组件和异步组件学习.html" class="prev">同步组件和异步组件学习</a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/study/assets/js/app.ee0bb4df.js" defer></script><script src="/study/assets/js/2.592151bd.js" defer></script><script src="/study/assets/js/32.5a8c1e45.js" defer></script>
+  </body>
+</html>
